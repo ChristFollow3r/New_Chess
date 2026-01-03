@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Nil - Programs\\Chess_Nil_Program\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C325D009-C1D8-464B-B8F4-2210EAB9164D}|Chess_Nil_Program\\Chess_Nil_Program.vcxproj|C:\\Nil - Programs\\Chess_Nil_Program\\Chess_Nil_Program\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C325D009-C1D8-464B-B8F4-2210EAB9164D}|Chess_Nil_Program\\Chess_Nil_Program.vcxproj|solutionrelative:Chess_Nil_Program\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Nil - Programs\\Chess_Nil_Program\\Chess_Nil_Program\\main.cpp",
+              "RelativeDocumentMoniker": "Chess_Nil_Program\\main.cpp",
+              "ToolTip": "C:\\Nil - Programs\\Chess_Nil_Program\\Chess_Nil_Program\\main.cpp",
+              "RelativeToolTip": "Chess_Nil_Program\\main.cpp",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-01-03T11:21:58.649Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
