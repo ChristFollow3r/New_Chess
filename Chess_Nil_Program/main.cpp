@@ -18,6 +18,7 @@ int main(int argc, char* argv[]) {
 		SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Error", "Error initializing SDL", nullptr);
         return 1;
     }
+
     
     // Create the window
 	int width = 800;
@@ -37,6 +38,9 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
+    // Load game assets
+	SDL_Texture* texture = IMG_LoadTexture(game.renderer, "assets/playButton.png");
+
     // Start the game loop
     bool running = true;
     while (running) {
@@ -55,11 +59,13 @@ int main(int argc, char* argv[]) {
         SDL_SetRenderDrawColor(game.renderer, 255, 255, 255, 255);
         SDL_RenderClear(game.renderer);
 
+		SDL_RenderTexture(game.renderer, texture, nullptr, nullptr);
+
         // Swap buffers and present
         SDL_RenderPresent(game.renderer);
     }
 
-
+	SDL_DestroyTexture(texture);
 	CleanUp(game);
     return 0;
 }
