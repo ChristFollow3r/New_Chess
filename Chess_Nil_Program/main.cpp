@@ -1,6 +1,7 @@
-#include <SDL3/SDL.h>  // This will be red/underlined at first — normal!
+#include <SDL3/SDL.h>
 #include <SDL3_image/SDL_image.h>
 #include <iostream>
+#include "rectangle.h"
 
 struct SDLState {
     SDL_Window* window;
@@ -41,6 +42,14 @@ int main(int argc, char* argv[]) {
 
     // Load game assets
 	SDL_Texture* texture = IMG_LoadTexture(game.renderer, "Assets/playButton.png");
+
+    float x = 400;
+	float y = 300;
+	float w = 80;
+	float h = 80;
+	SDL_FRect tempRect = { x, y, w, h };
+	Rectangle tempRectangle(tempRect); // Just to test the Rectangle class
+
     if (!texture) {
         std::cout << "ERROR cargando imagen: " << std::endl;
         SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Error imagen", "Image Error", nullptr);
@@ -71,6 +80,7 @@ int main(int argc, char* argv[]) {
 		SDL_GetTextureSize(texture, &texWidth, &texHeight);
 		SDL_FRect rect = { (width - texWidth) / 5, (height - texHeight) / 5, texWidth, texHeight }; // Goes on the top left
 
+		tempRectangle.Render(game.renderer); // Prints the rectangle
 		SDL_RenderTexture(game.renderer, texture, nullptr, &rect);
 
         // Swap buffers and present
