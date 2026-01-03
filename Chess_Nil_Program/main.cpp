@@ -1,4 +1,5 @@
 #include <SDL3/SDL.h>  // This will be red/underlined at first — normal!
+#include <SDL3_image/SDL_image.h>
 #include <iostream>
 
 struct SDLState {
