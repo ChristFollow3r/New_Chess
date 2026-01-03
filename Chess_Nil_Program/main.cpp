@@ -19,6 +19,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
+
     
     // Create the window
 	int width = 800;
@@ -39,7 +40,13 @@ int main(int argc, char* argv[]) {
     }
 
     // Load game assets
-	SDL_Texture* texture = IMG_LoadTexture(game.renderer, "assets/playButton.png");
+	SDL_Texture* texture = IMG_LoadTexture(game.renderer, "Assets/playButton.png");
+    if (!texture) {
+        std::cout << "ERROR cargando imagen: " << std::endl;
+        SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Error imagen", "Image Error", nullptr);
+        CleanUp(game);
+        return 1;
+    }
 
     // Start the game loop
     bool running = true;
@@ -59,7 +66,12 @@ int main(int argc, char* argv[]) {
         SDL_SetRenderDrawColor(game.renderer, 255, 255, 255, 255);
         SDL_RenderClear(game.renderer);
 
-		SDL_RenderTexture(game.renderer, texture, nullptr, nullptr);
+        float texWidth;
+        float texHeight;
+		SDL_GetTextureSize(texture, &texWidth, &texHeight);
+		SDL_FRect rect = { (width - texWidth) / 5, (height - texHeight) / 5, texWidth, texHeight }; // Goes on the top left
+
+		SDL_RenderTexture(game.renderer, texture, nullptr, &rect);
 
         // Swap buffers and present
         SDL_RenderPresent(game.renderer);
