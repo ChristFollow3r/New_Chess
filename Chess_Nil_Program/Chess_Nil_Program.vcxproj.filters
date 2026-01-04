@@ -24,6 +24,9 @@
     <ClCompile Include="button.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="gameplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\playButton.png">
@@ -38,6 +41,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gameplay.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

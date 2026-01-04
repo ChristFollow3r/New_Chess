@@ -3,9 +3,9 @@
 #include <iostream>
 #include "rectangle.h"
 
-Rectangle::Rectangle(SDL_FRect nRect) : rect(nRect) {}
+Rectangle::Rectangle(SDL_FRect nRect, SDL_Color nColor) : rect(nRect), color(nColor) {}
 
-void Rectangle::Render(SDL_Renderer* renderer) {
+void Rectangle::Render(SDL_Renderer* renderer) const{
 	if (!renderer) return;
 
 	SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);

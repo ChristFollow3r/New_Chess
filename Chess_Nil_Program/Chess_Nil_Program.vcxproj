@@ -134,6 +134,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="button.cpp" />
+    <ClCompile Include="gameplay.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="rectangle.cpp" />
   </ItemGroup>
@@ -143,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="button.h" />
+    <ClInclude Include="gameplay.h" />
     <ClInclude Include="rectangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
