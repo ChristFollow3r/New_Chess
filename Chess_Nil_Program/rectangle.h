@@ -8,15 +8,13 @@ class Rectangle {
 
 	public:
 		Rectangle(SDL_FRect nRect);
-		void Render(SDL_Renderer* renderer);
+		virtual void Render(SDL_Renderer* renderer);
 
 		void SetPosition(float x, float y);
 		void SetSize(float width, float height);
 		SDL_FRect GetRect() const { return rect; };
 
 		~Rectangle() {} // This stays just in case
-
-	protected:
 		SDL_FRect rect;
 		SDL_Color color;
 
