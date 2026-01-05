@@ -3,7 +3,7 @@
 
 std::vector<std::vector<Rectangle>> CreateBoard() {
 
-	std::vector<std::vector<Rectangle>> board;
+	std::vector<std::vector<Rectangle>> board; // Maybe this should be a vector of structs
 
 	SDL_Color light = { 240, 217, 181, 255 };
 	SDL_Color dark = { 181, 136, 99, 255 };
